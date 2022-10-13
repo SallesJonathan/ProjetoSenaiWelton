@@ -67,7 +67,6 @@
             this.label19 = new System.Windows.Forms.Label();
             this.txtEnderecoCep = new System.Windows.Forms.MaskedTextBox();
             this.btnPesquisarCep = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -111,7 +110,6 @@
             // 
             // txtNome
             // 
-            this.txtNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(80)))));
             this.txtNome.Location = new System.Drawing.Point(107, 133);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(217, 27);
@@ -152,6 +150,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(130, 27);
             this.txtCpf.TabIndex = 8;
+            this.txtCpf.Tag = "Obrigatorio";
             // 
             // txtDataNascimento
             // 
@@ -160,6 +159,7 @@
             this.txtDataNascimento.Name = "txtDataNascimento";
             this.txtDataNascimento.Size = new System.Drawing.Size(127, 27);
             this.txtDataNascimento.TabIndex = 9;
+            this.txtDataNascimento.Tag = "Obrigatorio";
             this.txtDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label6
@@ -173,7 +173,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.txtEmail.Location = new System.Drawing.Point(17, 283);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(217, 27);
@@ -237,6 +236,7 @@
             this.txtEnderecoNumero.Name = "txtEnderecoNumero";
             this.txtEnderecoNumero.Size = new System.Drawing.Size(109, 27);
             this.txtEnderecoNumero.TabIndex = 19;
+            this.txtEnderecoNumero.Tag = "Obrigatorio";
             // 
             // label11
             // 
@@ -352,6 +352,7 @@
             this.cmbNacionalidade.Name = "cmbNacionalidade";
             this.cmbNacionalidade.Size = new System.Drawing.Size(156, 28);
             this.cmbNacionalidade.TabIndex = 31;
+            this.cmbNacionalidade.Tag = "Obrigatorio";
             // 
             // label17
             // 
@@ -403,6 +404,7 @@
             this.txtEnderecoCep.Name = "txtEnderecoCep";
             this.txtEnderecoCep.Size = new System.Drawing.Size(130, 27);
             this.txtEnderecoCep.TabIndex = 37;
+            this.txtEnderecoCep.Tag = "Obrigatorio";
             // 
             // btnPesquisarCep
             // 
@@ -412,14 +414,7 @@
             this.btnPesquisarCep.TabIndex = 38;
             this.btnPesquisarCep.Text = "Pesquisar";
             this.btnPesquisarCep.UseVisualStyleBackColor = true;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 501);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(774, 22);
-            this.statusStrip1.TabIndex = 39;
-            this.statusStrip1.Text = "statusStrip1";
+            this.btnPesquisarCep.Click += new System.EventHandler(this.btnPesquisarCep_Click);
             // 
             // frmCadastroFuncionario
             // 
@@ -427,7 +422,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(774, 523);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.btnPesquisarCep);
             this.Controls.Add(this.txtEnderecoCep);
             this.Controls.Add(this.txtTelefoneContato);
@@ -519,6 +513,5 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.MaskedTextBox txtEnderecoCep;
         private System.Windows.Forms.Button btnPesquisarCep;
-        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

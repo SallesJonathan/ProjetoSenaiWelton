@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppModelo.View.Windows.Helpers
@@ -13,7 +9,8 @@ namespace AppModelo.View.Windows.Helpers
             internal static void FormatarCamposObrigatorios(Form frm)
             {
                 Action<Control.ControlCollection> func = null;
-
+                //func é uma função anonima que recebe todos os controles do formulário
+                //e de acordo com o switch aplica as formatações
                 func = (controls) =>
                 {
                     foreach (Control control in controls)
@@ -36,6 +33,14 @@ namespace AppModelo.View.Windows.Helpers
                                     }
                                     break;
                                 }
+                            case ComboBox box:
+                                {
+                                    if (box.Tag == "Obrigatorio")
+                                    {
+                                        box.BackColor = Color.LightGoldenrodYellow;
+                                    }
+                                    break;
+                                }
                             default:
                                 func(control.Controls);
                                 break;
@@ -45,6 +50,6 @@ namespace AppModelo.View.Windows.Helpers
                 };
                 func(frm.Controls);
             }
-        }
+        
     }
 }
