@@ -23,6 +23,7 @@ namespace AppModelo.View.Windows.Cadastros
             txtEnderecoBairro.Text = endereco.Bairro;
             txtEnderecoLogradouro.Text = endereco.Logradouro;
             txtEnderecoMunicipio.Text = endereco.Localidade;
+            txtEnderecoUf.Text = endereco.Uf;
         }
     }
 }

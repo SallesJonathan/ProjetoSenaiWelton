@@ -51,6 +51,10 @@
       <Project>{CABD4FF9-61F6-452B-915E-DB9F5465FC90}</Project>
       <Name>AppModelo.Model.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\AppModelo.Model.Infra\AppModelo.Model.Infra.csproj">
+      <Project>{D723694E-BF48-45FC-8B3B-0DC158909AF4}</Project>
+      <Name>AppModelo.Model.Infra</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
