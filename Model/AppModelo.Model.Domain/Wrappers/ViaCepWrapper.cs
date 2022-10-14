@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppModelo.Model.Domain.Wrappers
 {
-    public class ViaCepWrapper
+    public class ViaCepWrapper : EntidadeBase
     {
         public string Cep { get; set; }
         public string Logradouro { get; set; }
