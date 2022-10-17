@@ -1,4 +1,5 @@
 ﻿using AppModelo.Controller.External;
+using AppModelo.Model.Domain.Validators;
 using AppModelo.View.Windows.Helpers;
 using System;
 using System.ComponentModel;
@@ -50,6 +51,18 @@ namespace AppModelo.View.Windows.Cadastros
             errorProvider.Clear();
 
            
+        }
+
+        private void txtCpf_Validating(object sender, CancelEventArgs e)
+        {
+            var cpf = txtCpf.Text;
+            var cpfEhValido = Validadores.ValidarCPF(cpf);
+            if(cpfEhValido is false)
+            {
+                errorProvider.SetError(txtCpf, "CPF Inválido");
+                return;
+            }
+            errorProvider.Clear();
         }
     }
 }
