@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gvNacionalidades = new System.Windows.Forms.DataGridView();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,13 +70,13 @@
             this.txtDescricao.Size = new System.Drawing.Size(197, 20);
             this.txtDescricao.TabIndex = 3;
             // 
-            // dataGridView1
+            // gvNacionalidades
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(381, 122);
-            this.dataGridView1.TabIndex = 4;
+            this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNacionalidades.Location = new System.Drawing.Point(15, 132);
+            this.gvNacionalidades.Name = "gvNacionalidades";
+            this.gvNacionalidades.Size = new System.Drawing.Size(381, 122);
+            this.gvNacionalidades.TabIndex = 4;
             // 
             // btnSalvar
             // 
@@ -105,14 +105,14 @@
             this.ClientSize = new System.Drawing.Size(410, 289);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gvNacionalidades);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNacionalidades";
             this.Text = "frmNacionalidades";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +124,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gvNacionalidades;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Panel panel1;
     }
