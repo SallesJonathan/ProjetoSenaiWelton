@@ -474,6 +474,7 @@
             this.Name = "frmCadastroFuncionario";
             this.Tag = "";
             this.Text = "frmCadastroFuncionario";
+            this.Load += new System.EventHandler(this.frmCadastroFuncionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

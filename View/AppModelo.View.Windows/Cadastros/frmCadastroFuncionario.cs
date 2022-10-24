@@ -72,5 +72,10 @@ namespace AppModelo.View.Windows.Cadastros
             }
             errorProvider.Clear();
         }
+
+        private void frmCadastroFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

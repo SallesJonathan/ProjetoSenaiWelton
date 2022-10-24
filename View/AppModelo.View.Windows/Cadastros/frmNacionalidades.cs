@@ -12,7 +12,7 @@ namespace AppModelo.View.Windows.Cadastros
             InitializeComponent();
 
             var listaDeNacionalidades = _nacionalidadeController.ObterTodasNacionalidades();
-            gvNacionalidades.DataSource = listaDeNacionalidades
+            gvNacionalidades.DataSource = listaDeNacionalidades;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
