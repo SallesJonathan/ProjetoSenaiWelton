@@ -72,6 +72,7 @@
             this.naturalidadesToolStripMenuItem.Name = "naturalidadesToolStripMenuItem";
             this.naturalidadesToolStripMenuItem.Size = new System.Drawing.Size(215, 30);
             this.naturalidadesToolStripMenuItem.Text = "Naturalidades";
+            this.naturalidadesToolStripMenuItem.Click += new System.EventHandler(this.naturalidadesToolStripMenuItem_Click);
             // 
             // funcionariosToolStripMenuItem
             // 
@@ -91,7 +92,7 @@
             this.HelpButton = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";

@@ -4,18 +4,19 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppModelo.Model.Infra.Repositories
 {
     public class NaturalidadeRepository
     {
-        public bool Inserir(string descricao)
+        public bool Inserir(string descricao, bool status)
         {
-            //string interpolation
-            var sql = $"INSERT INTO nacionalidades (descricao) VALUES ('{descricao}')";
+            var agora = DateTime.Now.ToString("u");
+
+            var sql = $"INSERT INTO naturalidade " +
+                    $"(descricao, dataCriacao, dataAlteracao, ativo) " +
+                    $"VALUES " +
+                    $"('{descricao}','{agora}','{agora}', {status})";
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
             var resultado = conexaoBd.Execute(sql);
             return resultado > 0;
@@ -28,6 +29,7 @@ namespace AppModelo.Model.Infra.Repositories
         {
             return false;
         }
+
         public IEnumerable<NaturalidadeEntity> ObterTodos()
         {
             var sql = "SELECT id, descricao FROM naturalidade ORDER BY descricao DESC";
@@ -38,7 +40,6 @@ namespace AppModelo.Model.Infra.Repositories
 
             return resultado;
         }
-
         public IEnumerable<NaturalidadeEntity> ObterTodosAtivos()
         {
             var sql = "SELECT id, descricao FROM naturalidade WHERE ativo = true";
@@ -53,10 +54,9 @@ namespace AppModelo.Model.Infra.Repositories
         {
             return new NacionalidadeEntity();
         }
-
         public NaturalidadeEntity ObterPorDescricao(string descricao)
         {
-            var sql = $"SELECT id, descricao FROM naturaliade WHERE descricao = '{descricao}' ";
+            var sql = $"SELECT id, descricao FROM naturalidade WHERE descricao = '{descricao}' ";
 
             using IDbConnection conexaoBd = new MySqlConnection(Databases.MySql.ConectionString());
 

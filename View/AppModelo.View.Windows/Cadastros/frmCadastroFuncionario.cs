@@ -47,7 +47,11 @@ namespace AppModelo.View.Windows.Cadastros
             }
 
             //verifica se digitou algum numero
-            foreach(var letra in txtNome.Text)
+
+            //SomenteLetras();
+            //VerificarSeExisteNumeroNoTexto();
+
+            foreach (var letra in txtNome.Text)
             {
                 if (char.IsNumber(letra))
                 {

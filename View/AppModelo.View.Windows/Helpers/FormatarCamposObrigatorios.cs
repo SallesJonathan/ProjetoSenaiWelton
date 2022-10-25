@@ -50,6 +50,7 @@ namespace AppModelo.View.Windows.Helpers
                 };
                 func(frm.Controls);
             }
-        
+
+
     }
 }

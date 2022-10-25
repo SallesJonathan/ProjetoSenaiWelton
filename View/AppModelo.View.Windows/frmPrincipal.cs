@@ -24,5 +24,13 @@ namespace AppModelo.View.Windows
             form.MdiParent = this;
             form.Show();
         }
+
+        private void naturalidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var form = new frmNaturalidade();
+            form.MdiParent = this;
+            form.Show();
+
+        }
     }
 }
