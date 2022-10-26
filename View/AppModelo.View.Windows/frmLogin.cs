@@ -10,17 +10,6 @@ namespace AppModelo.View.Windows
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var form = new frmPrincipal();
-            form.Show();
-            this.Hide();
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            var form = new frmRecuperarSenha();
-            form.ShowDialog();
-        }
     }
 }

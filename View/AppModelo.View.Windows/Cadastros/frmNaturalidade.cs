@@ -30,5 +30,13 @@ namespace AppModelo.View.Windows.Cadastros
             var resposta = controller.Cadastrar(descricaoMaiuscula, chkStatus.Checked);
 
         }
+
+        private void frmNaturalidade_Load(object sender, EventArgs e)
+        {
+            var controller = new NaturalidadeController();
+            var dataSource = controller.ObterTodasNaturalidades();
+            gvNaturalidade.DataSource = dataSource;
+
+        }
     }
 }

@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.gvNacionalidades = new System.Windows.Forms.DataGridView();
+            this.gvNaturalidade = new System.Windows.Forms.DataGridView();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.chkStatus = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,13 +51,13 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // gvNacionalidades
+            // gvNaturalidade
             // 
-            this.gvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvNacionalidades.Location = new System.Drawing.Point(42, 135);
-            this.gvNacionalidades.Name = "gvNacionalidades";
-            this.gvNacionalidades.Size = new System.Drawing.Size(381, 122);
-            this.gvNacionalidades.TabIndex = 10;
+            this.gvNaturalidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvNaturalidade.Location = new System.Drawing.Point(42, 135);
+            this.gvNaturalidade.Name = "gvNaturalidade";
+            this.gvNaturalidade.Size = new System.Drawing.Size(381, 122);
+            this.gvNaturalidade.TabIndex = 10;
             // 
             // txtDescricao
             // 
@@ -114,14 +114,15 @@
             this.ClientSize = new System.Drawing.Size(478, 278);
             this.Controls.Add(this.chkStatus);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.gvNacionalidades);
+            this.Controls.Add(this.gvNaturalidade);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmNaturalidade";
             this.Text = "frmNaturalidade";
-            ((System.ComponentModel.ISupportInitialize)(this.gvNacionalidades)).EndInit();
+            this.Load += new System.EventHandler(this.frmNaturalidade_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvNaturalidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,7 +132,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView gvNacionalidades;
+        private System.Windows.Forms.DataGridView gvNaturalidade;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label2;
