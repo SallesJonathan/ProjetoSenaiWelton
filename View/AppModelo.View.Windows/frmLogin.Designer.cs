@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnLogar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,7 +37,9 @@
             this.lblSuporteContato = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogar
@@ -48,6 +51,7 @@
             this.btnLogar.TabIndex = 0;
             this.btnLogar.Text = "Entrar";
             this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
             // 
             // txtEmail
             // 
@@ -122,6 +126,10 @@
             this.txtSenha.Size = new System.Drawing.Size(345, 29);
             this.txtSenha.TabIndex = 2;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -143,6 +151,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +167,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblSuporteContato;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

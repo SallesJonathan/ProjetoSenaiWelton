@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtEmailRecuperarSenha = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnRecuperarSenha = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,14 +48,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Recuperar senha";
             // 
-            // txtEmailRecuperarSenha
+            // txtEmail
             // 
-            this.txtEmailRecuperarSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmailRecuperarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailRecuperarSenha.Location = new System.Drawing.Point(88, 100);
-            this.txtEmailRecuperarSenha.Name = "txtEmailRecuperarSenha";
-            this.txtEmailRecuperarSenha.Size = new System.Drawing.Size(304, 26);
-            this.txtEmailRecuperarSenha.TabIndex = 1;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(88, 100);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(304, 26);
+            this.txtEmail.TabIndex = 1;
             // 
             // btnRecuperarSenha
             // 
@@ -65,7 +68,7 @@
             this.btnRecuperarSenha.TabIndex = 2;
             this.btnRecuperarSenha.Text = "RECUPERAR ACESSO";
             this.btnRecuperarSenha.UseVisualStyleBackColor = false;
-            this.btnRecuperarSenha.Click += new System.EventHandler(this.button1_Click);
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
             // 
             // btnCancelar
             // 
@@ -81,6 +84,10 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -89,12 +96,13 @@
             this.ClientSize = new System.Drawing.Size(489, 250);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnRecuperarSenha);
-            this.Controls.Add(this.txtEmailRecuperarSenha);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmRecuperarSenha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "frmRecuperarSenha";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,8 +111,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtEmailRecuperarSenha;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnRecuperarSenha;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

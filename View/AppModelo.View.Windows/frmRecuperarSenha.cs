@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppModelo.Model.Domain.Validators;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,9 +24,15 @@ namespace AppModelo.View.Windows
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            var emailEhValido = Validadores.EmailEValido(txtEmail.Text);
+            if (emailEhValido is false)
+            {
+                errorProvider1.SetError(txtEmail, "Seu e-mail está errado");
+                txtEmail.Focus();
+                return;
+            }
         }
     }
 }
