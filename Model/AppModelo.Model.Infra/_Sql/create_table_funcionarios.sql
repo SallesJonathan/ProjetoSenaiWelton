@@ -1,4 +1,4 @@
-﻿CREATE TABLE wwonline16.funcionarios (
+﻿CREATE TABLE funcionarios (
 	id int NOT NULL,
 	id_naturalidade INT NOT NULL,
 	id_nacionalidade INT NOT NULL,
@@ -17,6 +17,6 @@
 	municipio VARCHAR(250) NOT NULL,
 	uf VARCHAR(2) NOT NULL,
 	CONSTRAINT pk_funcionarios_id PRIMARY KEY (id),
-	CONSTRAINT fk_nacionalidades_id FOREIGN KEY (id_nacionalidade) REFERENCES wwonline16.nacionalidades(id),
-	CONSTRAINT fk_naturalidade_id FOREIGN KEY (id_naturalidade) REFERENCES wwonline16.naturalidade(id)
+	CONSTRAINT fk_nacionalidades_id FOREIGN KEY (id_nacionalidade) REFERENCES nacionalidades(id),
+	CONSTRAINT fk_naturalidade_id FOREIGN KEY (id_naturalidade) REFERENCES naturalidade(id)
 );
