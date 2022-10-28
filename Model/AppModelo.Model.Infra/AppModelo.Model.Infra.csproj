@@ -116,6 +116,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="_Sql\create_table_funcionarios.sql" />
     <Content Include="_Sql\create_table_nacionalidades.sql" />
   </ItemGroup>
   <ItemGroup />
