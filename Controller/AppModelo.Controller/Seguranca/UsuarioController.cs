@@ -38,6 +38,7 @@ namespace AppModelo.Controller.Seguranca
             {
                 return "Programador errou sql e vc nao pode recuperar sua senha";
             }
+            
             //3 PASSO MANDAR A NOVA SENHA PARA E-MAIL
             var emailService = new EmailService();
             var mensagemHtml = @"<p><b>Criamos um nova senha para você</b></p>
@@ -48,8 +49,3 @@ namespace AppModelo.Controller.Seguranca
         }
     }
 }
-//public static string GerarIndentificadorUnico(int numeroCaracteres)
-//{
-//    var identificador = Guid.NewGuid().ToString("N").Substring(0, numeroCaracteres).ToUpper();
-//    return identificador;
-//}
