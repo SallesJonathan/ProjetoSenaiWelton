@@ -1,4 +1,6 @@
 ﻿using AppModelo.Model.Infra.Repositories;
+using AppModelo.Model.Infra.Services;
+using System;
 
 namespace AppModelo.Controller.Seguranca
 {
@@ -18,5 +20,36 @@ namespace AppModelo.Controller.Seguranca
                 return false;
             }
         }
+
+        public string RecuperarSenha(string email)
+        {
+            //1 PASSO VERIFICAR SE EMAIL É DE UM USUARIO
+            var repository = new UsuarioRepository();
+            var usuario = repository.ObterPorEmail(email);
+            if(usuario is null)
+            {
+                return "Usuário não foi encontrado";
+            }
+
+            //2 PASSO GERAR UMA SENHA NOVA E GRAVA NO BANCO
+            var novaSenha = Guid.NewGuid().ToString("N").Substring(0, 8).ToUpper();
+            var atualizouSenha = repository.AtualizarSenha(email, novaSenha);
+            if(atualizouSenha is false)
+            {
+                return "Programador errou sql e vc nao pode recuperar sua senha";
+            }
+            //3 PASSO MANDAR A NOVA SENHA PARA E-MAIL
+            var emailService = new EmailService();
+            var mensagemHtml = @"<p><b>Criamos um nova senha para você</b></p>
+                                  <p>Sua nova senha é: <b>" + novaSenha + "</b></p>";
+            var emailEnviado = 
+                emailService.EnviarEmail(usuario.Nome, usuario.Email, "Recuperação de Senha", mensagemHtml);
+            return "";
+        }
     }
 }
+//public static string GerarIndentificadorUnico(int numeroCaracteres)
+//{
+//    var identificador = Guid.NewGuid().ToString("N").Substring(0, numeroCaracteres).ToUpper();
+//    return identificador;
+//}

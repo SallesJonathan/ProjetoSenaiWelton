@@ -36,5 +36,11 @@ namespace AppModelo.View.Windows
                 MessageBox.Show("Usuário ou senha não encontrado");
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            var form = new frmRecuperarSenha();
+            form.Show();
+        }
     }
 }
